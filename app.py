@@ -6,11 +6,13 @@ from model import load_model
 
 st.beta_set_page_config(
     page_title="NRG Demonstration",
-    page_icon="logo.png",  # doesn't yet work
+    # page_icon="logo.png",  # currently breaks image below
 )
 st.image("logo.png", width=400)
 
-age = st.number_input("Age", min_value=1)
+st.write("Patient info:")
+
+age = st.number_input("Age", min_value=1, max_value=150)
 race = st.selectbox("Race", ("Asian", "Black", "White", "Other"))
 diet = st.selectbox("Diet", ("Keto", "Fasting", "Other"))
 insulin_resistant = st.checkbox("Patient has insulin resistance.")
@@ -39,6 +41,6 @@ model = load_model()
 
 st.write(
     f"""NRG predicts that this patient's mean brain instability is
-    {model.predict(personrow)[0]:.4f}.
+    **{model.predict(personrow)[0]:.4f}.**
     """
 )

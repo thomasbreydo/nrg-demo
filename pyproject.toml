@@ -1,20 +1,21 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool]
 [tool.poetry]
+authors = ["Thomas Breydo <tbreydo@gmail.com>"]
+description = "Web app to demonstrate NRG's prototype"
 name = "nrg"
 version = "0.1.0"
-description = "Web app to demonstrate NRG's prototype"
-authors = ["Thomas Breydo <tbreydo@gmail.com>"]
-
 [tool.poetry.dependencies]
-python = "^3.7"
-joblib = "^0.17.0"
 dill = "^0.3.2"
-streamlit = "^0.69.2"
+joblib = "^0.17.0"
 pandas = "^1.1.3"
+python = "^3.8"
 scikit-learn = "0.22.2.post1"
-
+streamlit = "^0.69.2"
 [tool.poetry.dev-dependencies]
-black = {version = "^20.8b1", allow-prereleases = true}
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dev-dependencies.black]
+allow-prereleases = true
+version = "^20.8b1"

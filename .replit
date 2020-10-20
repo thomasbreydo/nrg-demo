@@ -1,0 +1,1 @@
+run = "export MPLCONFIGDIR=/home/runner/.mplconfig && streamlit run app.py"
