@@ -4,6 +4,10 @@ import pandas as pd
 from model import load_model
 
 
+st.beta_set_page_config(
+    page_title="NRG Demonstration",
+    page_icon="logo.png",  # doesn't yet work
+)
 st.image("logo.png", width=400)
 
 age = st.number_input("Age", min_value=1)
